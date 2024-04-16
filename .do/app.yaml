@@ -6,3 +6,13 @@ services:
     deploy_on_push: true
     repo: digitalocean/sample-nodejs
   name: sample-nodejs
+- environment_slug: node-js
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: digitalocean/sample-nodejs
+  instance_count: 1
+  internal_ports:
+  - 8080
+  name: internal-service
+  run_command: yarn start
